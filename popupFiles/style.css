@@ -1,0 +1,50 @@
+html {
+    width: 200px;
+    height: 300px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    box-sizing: border-box;
+    transition: .3s;
+    border: none;
+    border-bottom: 3px solid #383A40;
+    outline: none;
+    padding: 8px;
+}
+
+input:focus {
+    border-bottom: 3px solid #CA895F;
+}
+
+#year {
+    margin-bottom: 15px;
+    
+}
+
+#month {
+    margin-bottom: 15px;
+}
+
+button {
+    width: 70px;
+    height: 30px;
+    background-color: #CA895F;
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+    border: none;
+
+    margin-top: 10px;
+    color: white;
+}
+
+.bar {
+    text-align: center;
+}
