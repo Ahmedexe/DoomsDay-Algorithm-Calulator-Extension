@@ -75,8 +75,51 @@ function DoomsDayAlg(year, month, day) {
     let doomsDayIdx = sumOfCalcs % 7
 
 
+    var weekDay;
+    let doomsDay = {
+        "1": 3,
+        "1leap": 4,
+        "2": 28,
+        "2leap": 29,
+        "3": 7,
+        "4": 4,
+        "5": 9,
+        "6": 6,
+        "7": 11,
+        "8": 8,
+        "9": 5,
+        "10": 10,
+        "11": 7,
+        "12": 12,
 
-    //test
-    return days[doomsDayIdx];
 
+    }
+
+    
+    let doomsDayOfMon = () => {
+        if ((month == 1 || month == 2) && isLeap()) {
+            return doomsDay[String(month) + "leap"];
+        } else {
+            return doomsDay[String(month)];
+        }
+    }
+        
+    let diff = day - doomsDayOfMon();
+    if (diff >= 0) {
+        weekDay = days[((diff % 7) + doomsDayIdx) % 7];
+    } else {
+        if ((doomsDayIdx - (Math.abs(diff) % 7) ) >= 0) {
+            weekDay = days[doomsDayIdx - (Math.abs(diff) % 7)];
+        } else {
+            weekDay = days[7 + (doomsDayIdx - (Math.abs(diff) % 7))]
+        }
+    }
+    
+            
+            
+
+    return weekDay;
 }
+
+    
+
