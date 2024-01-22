@@ -12,9 +12,15 @@ btn.addEventListener("click", function() {
 
     if (isNumber(yearVal) && isNumber(monVal) && isNumber(dayVal)) {
 
-        bar.innerHTML = DoomsDayAlg(parseInt(yearVal), parseInt(monVal), parseInt(dayVal));
+        if (parseInt(dayVal) > 0 && parseInt(dayVal) < 32) {
+            bar.innerHTML = DoomsDayAlg(parseInt(yearVal), parseInt(monVal), parseInt(dayVal));
+        } else {
+            bar.innerHTML = "Enter a valid input";
+        }
+
+        
     } else {
-        bar.innerHTML = "All Values Must be Integers";
+        bar.innerHTML = "Enter a valid input";
     }
 })
 
