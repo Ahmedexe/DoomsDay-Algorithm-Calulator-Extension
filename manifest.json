@@ -1,9 +1,10 @@
 {
     "manifest_version": 3,
     "name": "DoomsDay Algorithm Calculator",
-    "description": "Base Level Extension",
+    "description": "Finding The weekDay of any Date",
     "version": "1.0",
     "action": {
-      "default_popup": "popupFiles/index.html"
+      "default_popup": "popupFiles/index.html",
+      "default_icon": "logo.png"
     }
   }
